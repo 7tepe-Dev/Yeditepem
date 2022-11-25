@@ -1,5 +1,6 @@
 package com.example.yeditepem.model
 
-data class User(
-    val name: String
-)
+interface User {
+    val userName: String
+    val password: String
+}
