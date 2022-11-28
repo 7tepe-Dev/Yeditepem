@@ -61,6 +61,7 @@
         android:layout_marginBottom="-450dp"
         android:hint="Şifre"
         android:inputType="textPassword"
+        android:drawableEnd="@drawable/sifre_goster"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -86,7 +87,6 @@
         android:id="@+id/button_giris_Yap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="120dp"
         android:layout_marginBottom="-1200dp"
         android:background="00FFFFFF"
