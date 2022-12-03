@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/okulDuyuru"
+        android:title=""
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/okul_duyuru"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/anasayfa"
+        android:title=""
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/bottom_nav_anasayfa"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/personalPage"
+        android:title=""
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/bottom_navbar_personal_page"
+        android:enabled="true"
+        />
+</menu>
