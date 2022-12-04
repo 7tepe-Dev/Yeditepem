@@ -39,7 +39,8 @@
             android:layout_height="272dp"
             android:layout_gravity="center"
             android:layout_marginTop="-133dp"
-            app:srcCompat="@drawable/img_1" />
+            app:srcCompat="@drawable/img_1"
+            />
 
         <ImageButton
             android:id="@+id/vectorButon"

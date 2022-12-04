@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:visibility="visible"
+    tools:context=".HomePage"
+    android:background="#2CAD8F">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:background="#2CAD8F"
+        app:menu="@menu/top_app_bar"
+        app:navigationIcon="?attr/actionModeCloseDrawable"
+        app:navigationIconTint="@color/white"
+        app:title="" />
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottom_navigation"
+      android:layout_width="match_parent"
+      android:layout_height="44dp"
+      android:layout_gravity="bottom"
+      android:background="#0048B4"
+      app:itemIconTint="@color/white"
+      app:menu="@menu/bottom_navigation_menu"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="@drawable/ellipse2"
+        android:layout_marginBottom="45dp">
+
+        <ImageButton
+            android:id="@+id/personalPagePhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/personal_page_photo"
+            android:background="@drawable/personal_page_circlwe"
+            android:backgroundTint="@color/design_default_color_surface"
+            android:layout_gravity="center"
+            android:clickable="true"
+            />
+
+        <Button
+            android:id="@+id/kisiselBilgilerButton"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Kisisel Bilgiler"
+
+            />
+        <Button
+            android:id="@+id/parolayiGuncelleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Parolayi Guncelle"
+
+            />
+        <Button
+            android:id="@+id/oturumuKapatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Oturumu Kapat"
+            />
+
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            >
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
