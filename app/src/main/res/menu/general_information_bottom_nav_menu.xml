@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="generalInfoHomeButton"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/general_info_navbar_home_button"/>
+    <item
+        android:id="generalInfoScheduleButton"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/general_info_navbar_schedule_button"/>
+    <item
+        android:id="generalInfoLessonsButton"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/general_info_navbar_lessons_button"/>
+    <item
+        android:id="generalInfoExamsButton"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/general_info_navbar_exams_button"/>
+    <item
+        android:id="generalInfoApplicationsButton"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/general_info_navbar_applications_button"/>
+</menu>
