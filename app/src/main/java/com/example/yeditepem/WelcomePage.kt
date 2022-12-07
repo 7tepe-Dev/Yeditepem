@@ -11,8 +11,8 @@ class WelcomePage : AppCompatActivity() {
         setContentView(R.layout.activity_welcome_page)
 
 
-        window.decorView.systemUiVisibility = View.SYSTEM.UI_FLAG_FULLSCREEN
-        supportActionBar?.hide()
+        //window.decorView.systemUiVisibility = View.SYSTEM.UI_FLAG_FULLSCREEN
+        //supportActionBar?.hide()
     }
 
 
