@@ -30,5 +30,5 @@
         android:title=""
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/general_information_navbar_applications_button"/>
+        android:icon="@drawable/general_info_navbar_applications_button"/>
 </menu>
