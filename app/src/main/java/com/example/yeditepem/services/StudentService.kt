@@ -8,9 +8,9 @@ import retrofit2.http.Query
 
 interface StudentService {
     @GET("students")
-    suspend fun getStudents(): List<testStudent>
+    suspend fun getStudents(): List<Student>
 
     @GET("student")
-    suspend fun getStudentById(@Query("id") id: String): testStudent
+    suspend fun getStudentById(@Query("id") id: String): Student
 
 }

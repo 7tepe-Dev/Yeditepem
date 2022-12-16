@@ -16,8 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var announcementViewModel= AnnouncementViewModel()
-        announcementViewModel.getAnnouncements(this)
+        //var announcementViewModel= AnnouncementViewModel()
+        //announcementViewModel.getAnnouncements(this)
+
+        var x = StudentViewModel()
+        x.getStudentById(this, "20192905001")
     }
 
 }

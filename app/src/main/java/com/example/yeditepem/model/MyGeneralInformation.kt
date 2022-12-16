@@ -1,6 +1,7 @@
 package com.example.yeditepem.model
 
-data class MyGeneralInformation(val statusOfStudent: String,
+data class MyGeneralInformation(
+        val statusOfStudent: String,
         val studentID: String,
         val advisor: String,
         val grade: Float,

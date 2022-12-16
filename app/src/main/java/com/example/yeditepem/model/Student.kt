@@ -1,7 +1,10 @@
 package com.example.yeditepem.model
 
+import com.google.gson.annotations.SerializedName
+
 class Student(override val userName: String,
               override val password: String,
+              @SerializedName("generalInfo")
               val generalInformation: MyGeneralInformation?,
               /*val lessons: MyLessons?,
               val exams: MyExams?,

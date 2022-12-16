@@ -20,8 +20,8 @@ import com.example.yeditepem.services.testAdapter
 
 class StudentViewModel(): ViewModel() {
     lateinit var studentService: StudentService
-    var studentList : MutableLiveData<List<testStudent>> = MutableLiveData()
-    var student : MutableLiveData<testStudent> = MutableLiveData()
+    var studentList : MutableLiveData<List<Student>> = MutableLiveData()
+    var student : MutableLiveData<Student> = MutableLiveData()
 
     private fun _getStudents() {
         studentService = ApiClient.getClient().create(StudentService::class.java)
@@ -51,6 +51,7 @@ class StudentViewModel(): ViewModel() {
         student.observe(activity, Observer{
             if (student.value != null){
                 //testAdapter(activity, student.value!!)
+                println(student.value!!.generalInformation?.advisor)
             }
         })
     }
