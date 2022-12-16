@@ -2,7 +2,12 @@ package com.example.yeditepem.model
 
 class Student(override val userName: String,
               override val password: String,
-              val department: String,
+              val generalInformation: MyGeneralInformation?,
+              /*val lessons: MyLessons?,
+              val exams: MyExams?,
+              val applications: MyApplications?,*/
+
+              /*val department: String,
               val statusOfStudent: String,
               val studentID: String,
               val advisor: String,
@@ -19,6 +24,6 @@ class Student(override val userName: String,
               val allLessons: Array<Lesson>,
               val currentLessons: Array<Lesson>,
               val allExams: Array<Exam>,
-              val currentExams: Array<Exam>,) : User {
+              val currentExams: Array<Exam>,*/) : User {
 
 }
