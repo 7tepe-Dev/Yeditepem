@@ -2,7 +2,9 @@ package com.example.yeditepem.viewmodel
 
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import com.example.yeditepem.model.Student
 import com.example.yeditepem.model.testStudent
@@ -14,37 +16,42 @@ import retrofit2.Callback
 import retrofit2.Response
 import kotlinx.coroutines.launch
 import androidx.lifecycle.viewModelScope
+import com.example.yeditepem.services.testAdapter
 
-class StudentViewModel: ViewModel() {
+class StudentViewModel(): ViewModel() {
     lateinit var studentService: StudentService
-    //lateinit var studentList: MutableList<testStudent>
     var studentList : MutableLiveData<List<testStudent>> = MutableLiveData()
+    var student : MutableLiveData<testStudent> = MutableLiveData()
 
-
-/*
-    suspend fun getStudents(): MutableList<testStudent> {
-        studentService = ApiClient.getClient().create(StudentService::class.java)
-        var students = studentService.getStudents()
-
-        students.enqueue(object : Callback<List<testStudent>> {
-            override fun onFailure(call: Call<List<testStudent>>, t: Throwable) {
-                Log.d("Ow shit", "Here we go again")
-            }
-            override fun onResponse(call: Call<List<testStudent>>, response: Response<List<testStudent>>) {
-                if (response.isSuccessful) {
-                    studentList = (response.body() as MutableList<testStudent>?)!!
-                }
-            }
-        })
-
-        return studentList
-    }
-*/
-    fun getStudents() {
+    private fun _getStudents() {
         studentService = ApiClient.getClient().create(StudentService::class.java)
         viewModelScope.launch {
             studentList.value= studentService.getStudents()
         }
+    }
 
+    private fun _getStudentById(id: String) {
+        studentService = ApiClient.getClient().create(StudentService::class.java)
+        viewModelScope.launch {
+            student.value= studentService.getStudentById(id)
+        }
+    }
+
+    fun getStudents(activity: AppCompatActivity){
+        _getStudents()
+        studentList.observe(activity, Observer{
+            if (studentList.value != null){
+                //testAdapter(studentList.value!!)
+            }
+        })
+    }
+
+    fun getStudentById(activity: AppCompatActivity, id: String){
+        _getStudentById(id)
+        student.observe(activity, Observer{
+            if (student.value != null){
+                //testAdapter(activity, student.value!!)
+            }
+        })
     }
 }
