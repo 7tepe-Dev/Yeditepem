@@ -1,6 +1,7 @@
 package com.example.yeditepem.model
 
 data class Lesson(
+    var lessonID: String,
     var lessonName: String,
     var lessonCode: String,
     var professorName: String,
