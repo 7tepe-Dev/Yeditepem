@@ -1,5 +1,6 @@
 package com.example.yeditepem.viewmodel
 
+import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,13 +17,18 @@ import retrofit2.Callback
 import retrofit2.Response
 import kotlinx.coroutines.launch
 import androidx.lifecycle.viewModelScope
+import com.example.yeditepem.adapters.GeneralInformationAdapter
 import com.example.yeditepem.services.testAdapter
+import com.example.yeditepem.view.HomePage
 
 class StudentViewModel(): ViewModel() {
     lateinit var studentService: StudentService
     var studentList : MutableLiveData<List<Student>> = MutableLiveData()
-    var student : MutableLiveData<Student> = MutableLiveData()
+    //var student : MutableLiveData<Student> = MutableLiveData()
 
+    companion object {
+        val currentStudent: MutableLiveData<Student> = MutableLiveData()
+    }
     private fun _getStudents() {
         studentService = ApiClient.getClient().create(StudentService::class.java)
         viewModelScope.launch {
@@ -32,8 +38,9 @@ class StudentViewModel(): ViewModel() {
 
     private fun _getStudentById(id: String) {
         studentService = ApiClient.getClient().create(StudentService::class.java)
+
         viewModelScope.launch {
-            student.value= studentService.getStudentById(id)
+            currentStudent.value= studentService.getStudentById(id)
         }
     }
 
@@ -48,11 +55,15 @@ class StudentViewModel(): ViewModel() {
 
     fun getStudentById(activity: AppCompatActivity, id: String){
         _getStudentById(id)
-        student.observe(activity, Observer{
-            if (student.value != null){
+        currentStudent.observe(activity, Observer{
+            if (currentStudent.value != null){
+                val intent = Intent(activity, HomePage::class.java)
+                activity.startActivity(intent)
                 //testAdapter(activity, student.value!!)
-                println(student.value!!.generalInformation?.advisor)
+                //println(student.value!!.generalInformation?.advisor)
+                //GeneralInformationAdapter(activity, currentStudent.value!!.generalInformation!!)
             }
         })
     }
+
 }

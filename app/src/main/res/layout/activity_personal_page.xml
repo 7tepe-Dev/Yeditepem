@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:clickable="true"
     android:visibility="visible"
-    tools:context=".HomePage"
+    tools:context=".view.HomePage"
     android:background="#2CAD8F">
 
   <com.google.android.material.appbar.AppBarLayout

@@ -19,8 +19,12 @@ class MainActivity : AppCompatActivity() {
         //var announcementViewModel= AnnouncementViewModel()
         //announcementViewModel.getAnnouncements(this)
 
-        var x = StudentViewModel()
+        /*var x = StudentViewModel()
         x.getStudentById(this, "20192905001")
+
+        println(x.student.value?.generalInformation?.advisor)*/
+
+
     }
 
 }

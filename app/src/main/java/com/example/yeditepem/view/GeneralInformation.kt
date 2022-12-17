@@ -1,11 +1,12 @@
-package com.example.yeditepem
+package com.example.yeditepem.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.yeditepem.R
 
-class LoginPage : AppCompatActivity() {
+class GeneralInformation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_page)
+        setContentView(R.layout.activity_general_information)
     }
 }

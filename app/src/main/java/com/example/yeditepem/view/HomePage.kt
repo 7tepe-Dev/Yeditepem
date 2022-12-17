@@ -1,18 +1,17 @@
-package com.example.yeditepem
+package com.example.yeditepem.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import com.example.yeditepem.R
 import com.example.yeditepem.viewmodel.AnnouncementViewModel
+import com.example.yeditepem.viewmodel.StudentViewModel
 
 class HomePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
-
-        var announcementViewModel= AnnouncementViewModel()
-        announcementViewModel.getAnnouncements(this)
+        println(StudentViewModel.currentStudent.value?.generalInformation?.advisor)
+        /*var announcementViewModel= AnnouncementViewModel()
+        announcementViewModel.getAnnouncements(this)*/
     }
 }

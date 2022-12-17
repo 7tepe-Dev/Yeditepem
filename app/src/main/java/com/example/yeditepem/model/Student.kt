@@ -9,7 +9,7 @@ class Student(override val userName: String,
               /*val lessons:MyLessons?,
               val exams:MyExams?,
               val applications: MyApplications?*/
-    
+
               /*val lessons: MyLessons?,
               val exams: MyExams?,
               val applications: MyApplications?,*/
