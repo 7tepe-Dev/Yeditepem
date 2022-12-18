@@ -1,24 +1,15 @@
 package com.example.yeditepem.viewmodel
 
 import android.content.Intent
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import com.example.yeditepem.model.Student
-import com.example.yeditepem.model.testStudent
 import com.example.yeditepem.services.ApiClient
 import com.example.yeditepem.services.StudentService
-import com.example.yeditepem.view.MainActivity
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import kotlinx.coroutines.launch
 import androidx.lifecycle.viewModelScope
-import com.example.yeditepem.adapters.GeneralInformationAdapter
-import com.example.yeditepem.services.testAdapter
 import com.example.yeditepem.view.HomePage
 
 class StudentViewModel(): ViewModel() {

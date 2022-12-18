@@ -6,13 +6,14 @@
         android:enabled="true"
         android:icon="@drawable/yemek_menu"
         android:title=""
-        app:showAsAction="always"
-        />
+        android:checked="false"
+        app:showAsAction="always" />
     <item
         android:id="@+id/konumLogo"
-        android:enabled="true"
+        android:enabled="false"
         android:icon="@drawable/konum"
         android:title=""
+        android:checked="false"
         app:showAsAction="always"
         />
     <item
@@ -20,20 +21,21 @@
         android:enabled="true"
         android:icon="@drawable/takvim"
         android:title=""
-        app:showAsAction="always"
-        />
+        android:checked="false"
+        app:showAsAction="always" />
     <item
         android:id="@+id/okulDuyuru"
         android:enabled="true"
         android:icon="@drawable/duyuru"
         android:title=""
-        app:showAsAction="always"
-        />
+        android:checked="false"
+        app:showAsAction="always" />
     <item
         android:id="@+id/saglik"
-        android:enabled="true"
+        android:enabled="false"
         android:icon="@drawable/saglik"
         android:title=""
+        android:checked="false"
         app:showAsAction="always"
         />
 </menu>

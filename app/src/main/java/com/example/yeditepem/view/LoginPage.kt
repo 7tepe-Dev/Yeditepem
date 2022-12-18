@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.example.yeditepem.R
-import com.example.yeditepem.viewmodel.LoginViewModel
-import com.example.yeditepem.viewmodel.StudentViewModel
+import com.example.yeditepem.services.MealService
+import com.example.yeditepem.viewmodel.*
 
 class LoginPage : AppCompatActivity() {
     //lateinit var loginviewModel:LoginViewModel
@@ -25,9 +25,6 @@ class LoginPage : AppCompatActivity() {
         val password: TextView = findViewById(R.id.password)
         val loginviewModel = LoginViewModel()
         loginviewModel.getUserById(this,userName.text.toString(), password.text.toString())
-
-
-
-
     }
+
 }

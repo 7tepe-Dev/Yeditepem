@@ -5,10 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.yeditepem.adapters.AnnouncementAdapter
 import com.example.yeditepem.model.Announcement
 import com.example.yeditepem.services.AnnouncementService
 import com.example.yeditepem.services.ApiClient
-import com.example.yeditepem.services.testAdapter
 import kotlinx.coroutines.launch
 
 class AnnouncementViewModel(): ViewModel() {
@@ -26,7 +26,7 @@ class AnnouncementViewModel(): ViewModel() {
         _getAnnouncements()
         announcementList.observe(activity, Observer{
             if (announcementList.value != null){
-                testAdapter(activity, announcementList.value!!)
+                AnnouncementAdapter(activity, announcementList.value!!)
             }
         })
     }
