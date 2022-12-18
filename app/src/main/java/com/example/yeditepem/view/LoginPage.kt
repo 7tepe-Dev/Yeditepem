@@ -25,9 +25,5 @@ class LoginPage : AppCompatActivity() {
         val password: TextView = findViewById(R.id.password)
         val loginviewModel = LoginViewModel()
         loginviewModel.getUserById(this,userName.text.toString(), password.text.toString())
-
-
-
-
     }
 }
