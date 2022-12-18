@@ -25,7 +25,7 @@ class CalendarAdapter (activity: AppCompatActivity, myCalendars: List<Calendar>)
 
     fun HomePage(){
         var myLayout = activity.findViewById<LinearLayout>(R.id.myLayout)
-
+        myLayout.removeAllViews()
         for (calendar in myCalendars){
             var myButton = Button(activity);
             myButton.text = calendar.content

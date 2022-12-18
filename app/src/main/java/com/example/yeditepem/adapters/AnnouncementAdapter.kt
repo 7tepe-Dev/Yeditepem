@@ -24,7 +24,7 @@ class AnnouncementAdapter(activity: AppCompatActivity, myAnnouncements: List<Ann
 
     fun HomePage(){
         var myLayout = activity.findViewById<LinearLayout>(R.id.myLayout)
-
+        myLayout.removeAllViews()
         for (announcement in myAnnouncements){
             var myButton = Button(activity);
             myButton.text = "DUYURU " + announcement.time + "\n" + announcement.content

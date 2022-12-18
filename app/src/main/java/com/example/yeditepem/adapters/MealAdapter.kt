@@ -22,7 +22,7 @@ class MealAdapter(activity: AppCompatActivity, myMeals: List<Meal>) {
 
     fun HomePage(){
         var myLayout = activity.findViewById<LinearLayout>(R.id.myLayout)
-
+        myLayout.removeAllViews()
         for (meal in myMeals){
             var myButton = Button(activity);
             myButton.text = meal.foodName
