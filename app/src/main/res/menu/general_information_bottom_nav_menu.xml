@@ -6,7 +6,7 @@
         android:title=""
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/general_info_navbar_schedule_button"/>
+        android:icon="@drawable/general_info_navbar_home_button"/>
     <item
         android:id="@+id/generalInfoScheduleButton"
         android:title=""
