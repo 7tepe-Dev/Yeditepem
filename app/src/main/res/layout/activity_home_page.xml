@@ -57,21 +57,40 @@
         app:layout_constraintTop_toBottomOf="@+id/topAppBarLayout1">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/foodTabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/second_app_bar_food"
-            android:background="@drawable/second_app_bar_food"
             android:text="" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/mapTabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tuesday" />
+            android:icon="@drawable/second_app_bar_map"
+            android:text="" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/calenderTabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wednesday" />
+            android:icon="@drawable/second_app_bar_calendar"
+            android:text="" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/newsTabItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/second_app_bar_news"
+            android:text="" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/healthTabItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/second_app_bar_health"
+            android:text="" />
+
     </com.google.android.material.tabs.TabLayout>
 
 
