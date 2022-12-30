@@ -4,38 +4,42 @@
     <item
         android:id="@+id/yemekLogo"
         android:enabled="true"
-        android:icon="@drawable/yemek_menu"
+        android:icon="@drawable/second_app_bar_food"
         android:title=""
-        android:checked="false"
+        android:visible="true"
         app:showAsAction="always" />
+
     <item
         android:id="@+id/konumLogo"
-        android:enabled="false"
-        android:icon="@drawable/konum"
+        android:enabled="true"
+        android:icon="@drawable/second_app_bar_map"
         android:title=""
-        android:checked="false"
+        android:visible="true"
         app:showAsAction="always"
         />
     <item
         android:id="@+id/takvimLogo"
         android:enabled="true"
-        android:icon="@drawable/takvim"
+        android:icon="@drawable/second_app_bar_calendar"
         android:title=""
-        android:checked="false"
+        android:visible="true"
         app:showAsAction="always" />
     <item
         android:id="@+id/okulDuyuru"
         android:enabled="true"
-        android:icon="@drawable/duyuru"
+        android:icon="@drawable/second_app_bar_news"
         android:title=""
-        android:checked="false"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/saglik"
-        android:enabled="false"
-        android:icon="@drawable/saglik"
-        android:title=""
-        android:checked="false"
+        android:visible="true"
         app:showAsAction="always"
         />
+    <item
+        android:id="@+id/saglik"
+        android:enabled="true"
+        android:icon="@drawable/second_app_bar_health"
+        android:title=""
+        android:visible="true"
+        app:showAsAction="always"
+        />
+
+
 </menu>
