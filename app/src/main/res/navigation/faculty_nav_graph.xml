@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/faculty_nav_graph"
+    app:startDestination="@id/generalInformationFragment">
+
+    <fragment
+        android:id="@+id/generalInformationFragment"
+        android:name="com.example.yeditepem.GeneralInformationFragment"
+        android:label="fragment_general_information"
+        tools:layout="@layout/fragment_general_information" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.yeditepem.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="com.example.yeditepem.LessonsFragment"
+        android:label="fragment_lessons"
+        tools:layout="@layout/fragment_lessons" />
+    <fragment
+        android:id="@+id/applicationsFragment"
+        android:name="com.example.yeditepem.ApplicationsFragment"
+        android:label="fragment_applications"
+        tools:layout="@layout/fragment_applications" />
+    <fragment
+        android:id="@+id/examsFragment"
+        android:name="com.example.yeditepem.ExamsFragment"
+        android:label="fragment_exams"
+        tools:layout="@layout/fragment_exams" />
+</navigation>

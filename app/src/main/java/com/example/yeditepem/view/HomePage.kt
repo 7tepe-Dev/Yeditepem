@@ -18,7 +18,7 @@ class HomePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-        var bottomNav = findViewById(R.id.secondNavBar) as BottomNavigationView
+        /*var bottomNav = findViewById(R.id.secondNavBar) as BottomNavigationView
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.yemekLogo -> {
@@ -38,7 +38,7 @@ class HomePage : AppCompatActivity() {
                     true
                 }
             }
-        }
+        }*/
     }
 
     fun displayAnnouncements(){

@@ -28,30 +28,14 @@
             app:title="" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
-        android:id="@+id/homePage_scrollview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="411dp"
-        android:layout_marginBottom="773dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/myLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-        </LinearLayout>
-    </ScrollView>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#0048b4"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topAppBarLayout1">
@@ -61,6 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/second_app_bar_food"
+
             android:text="" />
 
         <com.google.android.material.tabs.TabItem
@@ -72,9 +57,9 @@
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/calenderTabItem"
+            android:icon="@drawable/second_app_bar_calendar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/second_app_bar_calendar"
             android:text="" />
 
         <com.google.android.material.tabs.TabItem
@@ -92,6 +77,18 @@
             android:text="" />
 
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="391dp"
+        android:layout_height="679dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:navGraph="@navigation/homepage_nav_graph" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

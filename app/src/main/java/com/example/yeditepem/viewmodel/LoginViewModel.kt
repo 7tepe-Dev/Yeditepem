@@ -50,8 +50,8 @@ class LoginViewModel: ViewModel() {
             }
             else if(loginObject.value != null && (loginObject.value!!.isOk != "true")){
                 println("Your username or pssword is wrong!")
-                activity.findViewById<TextView>(R.id.username).text = ""
-                activity.findViewById<TextView>(R.id.password).text = ""
+                activity.findViewById<TextView>(R.id.usernameTextBox).text = ""
+                activity.findViewById<TextView>(R.id.passwordTextBox).text = ""
             }
         })
 

@@ -21,8 +21,8 @@ class LoginPage : AppCompatActivity() {
     }
 
     fun handleLogin(view:View){
-        val userName:TextView = findViewById(R.id.username)
-        val password: TextView = findViewById(R.id.password)
+        val userName:TextView = findViewById(R.id.usernameTextBox)
+        val password: TextView = findViewById(R.id.passwordTextBox)
         val loginviewModel = LoginViewModel()
         loginviewModel.getUserById(this,userName.text.toString(), password.text.toString())
     }
