@@ -1,14 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UrgentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:id="@+id/urgentOuterLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/urgent_complete_frame"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <ImageButton
+            android:id="@+id/urgentWebsiteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#00000000"
+            android:clickable="true"
+            android:src="@drawable/urgent_website_button" />
+
+        <ImageButton
+            android:id="@+id/urgentPhoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#00000000"
+            android:clickable="true"
+            android:src="@drawable/urgent_phone_button" />
+
+        <ImageView
+            android:id="@+id/urgentFaxButton"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:src="@drawable/urgent_fax_button"
+            android:layout_gravity="center"
+            android:backgroundTint="#00000000" />
+
+        <ImageButton
+            android:id="@+id/urgentEmailButton"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:src="@drawable/urgent_email_button"
+            android:layout_gravity="center"
+            android:backgroundTint="#00000000"
+            android:clickable="true"/>
+
+        <LinearLayout
+            android:id="@+id/urgentInnerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/twitterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25.5dp"
+                android:backgroundTint="#00000000"
+                android:clickable="true"
+                android:src="@drawable/urgent_twitter_button" />
+
+            <ImageButton
+                android:id="@+id/instagramButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#00000000"
+                android:clickable="true"
+                android:src="@drawable/urgent_instagram_button" />
+
+            <ImageButton
+                android:id="@+id/facebookButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#00000000"
+                android:clickable="true"
+                android:src="@drawable/urgent_facebook_button" />
+
+            <ImageButton
+                android:id="@+id/linkedinButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#00000000"
+                android:clickable="true"
+                android:src="@drawable/urgent_linkedin_button" />
+
+            <ImageButton
+                android:id="@+id/youtubeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#00000000"
+                android:clickable="true"
+                android:src="@drawable/urgent_youtube_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
