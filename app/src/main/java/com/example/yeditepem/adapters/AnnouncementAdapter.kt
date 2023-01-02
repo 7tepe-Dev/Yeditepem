@@ -11,7 +11,7 @@ import com.example.yeditepem.model.Announcement
 
 class AnnouncementAdapter(activity: AppCompatActivity, myAnnouncements: List<Announcement>) {
 
-    private var activity = activity
+    /*private var activity = activity
     private var myAnnouncements = myAnnouncements
 
     init {
@@ -37,5 +37,5 @@ class AnnouncementAdapter(activity: AppCompatActivity, myAnnouncements: List<Ann
         }
 
 
-    }
+    }*/
 }

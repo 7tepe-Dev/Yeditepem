@@ -9,7 +9,7 @@ import com.example.yeditepem.model.MyGeneralInformation
 
 class GeneralInformationAdapter(var activity: AppCompatActivity, var myGeneralInformation: MyGeneralInformation):IAdapter {
 
-    init {
+   /* init {
         // acitivity adını kontrol ederken activitilere özel oluşturduğumuz metodları
         // switch case gibi bir yapıyla çağırabiliriz
         //Log.d("TEST", context.componentName.shortClassName)
@@ -29,7 +29,7 @@ class GeneralInformationAdapter(var activity: AppCompatActivity, var myGeneralIn
             myButton.text = "DUYURU " + announcement.time + "\n" + announcement.content
             myLayout?.addView(myButton)
         }*/
-    }
+    }*/
 
 
 }

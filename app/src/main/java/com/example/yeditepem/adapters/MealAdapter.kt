@@ -9,7 +9,7 @@ import com.example.yeditepem.model.Meal
 
 class MealAdapter(activity: AppCompatActivity, myMeals: List<Meal>) {
 
-    private var activity = activity
+    /*private var activity = activity
     private var myMeals= myMeals
 
     init {
@@ -30,5 +30,5 @@ class MealAdapter(activity: AppCompatActivity, myMeals: List<Meal>) {
         }
 
 
-    }
+    }*/
 }

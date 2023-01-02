@@ -12,7 +12,7 @@ import com.example.yeditepem.model.Calendar
 
 class CalendarAdapter (activity: AppCompatActivity, myCalendars: List<Calendar>) {
 
-    private var activity = activity
+    /*private var activity = activity
     private var myCalendars = myCalendars
 
     init {
@@ -31,5 +31,5 @@ class CalendarAdapter (activity: AppCompatActivity, myCalendars: List<Calendar>)
             myButton.text = calendar.content
             myLayout.addView(myButton)
         }
-    }
+    }*/
 }

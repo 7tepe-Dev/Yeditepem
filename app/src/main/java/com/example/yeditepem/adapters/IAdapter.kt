@@ -1,5 +1,5 @@
 package com.example.yeditepem.adapters
 
 interface IAdapter {
-    fun displayData():Unit
+    //fun displayData():Unit
 }

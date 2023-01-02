@@ -14,27 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yeditepem"
         tools:targetApi="31">
-        <activity
-            android:name=".ExamPage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".view.SchedulePage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".view.GeneralInformation"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
+
+
         <activity
             android:name=".view.PersonalPage"
             android:exported="false">
@@ -55,13 +37,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".view.MainActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".view.HomePage"
             android:exported="false">
