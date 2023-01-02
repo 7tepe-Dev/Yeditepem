@@ -46,7 +46,48 @@
                     android:id="@+id/basvuruSaati"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12.55"
+                    android:text="12:55"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="-73dp"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="7dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="196dp"
+                    android:src="@drawable/basvuru_onaylandi_vector"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/general_information_frame"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/basvuruTarihi2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="11dp"
+                    android:text="14 Eylul 2022"
+                    android:textSize="12dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/basvuruSaati2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00"
                     android:layout_gravity="start|bottom"
                     android:layout_marginStart="-73dp"
                     android:textSize="11dp"
