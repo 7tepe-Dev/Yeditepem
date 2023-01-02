@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/meal_nav_graph"
+    app:startDestination="@id/tabldotMealMenu">
+
+    <fragment
+        android:id="@+id/tabldotMealMenu"
+        android:name="com.example.yeditepem.TabldotMealMenu"
+        android:label="fragment_tabldot_meal_menu"
+        tools:layout="@layout/fragment_tabldot_meal_menu" />
+    <fragment
+        android:id="@+id/studentMealMenu"
+        android:name="com.example.yeditepem.StudentMealMenu"
+        android:label="fragment_student_meal_menu"
+        tools:layout="@layout/fragment_student_meal_menu" />
+</navigation>
