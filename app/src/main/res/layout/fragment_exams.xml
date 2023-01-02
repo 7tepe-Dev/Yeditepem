@@ -32,25 +32,272 @@
 
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/examsScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/examsFragmentTabLayout">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exam_page_coursename_frame"
+                        android:text="ACM431"
+                        android:textAlignment="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exams_fragment_course_note_frame"
+                        android:layout_marginTop="2dp"
+                        android:text="82"
+                        android:textSize="60sp"
+                        android:textAlignment="center"
+                        android:paddingTop="35dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exams_fragment_notes_detailed"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical"
+                        >
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Midterm"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="9dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="90"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9 Kasim 2022"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="5dp"
+
+                            />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exams_fragment_notes_detailed"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Final"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="9dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="76"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19 Aralik 2022"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="5dp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exam_page_coursename_frame"
+                        android:text="ACM465"
+                        android:textAlignment="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exams_fragment_course_note_frame"
+                        android:layout_marginTop="2dp"
+                        android:text="-"
+                        android:textSize="60sp"
+                        android:textAlignment="center"
+                        android:paddingTop="35dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exams_fragment_notes_detailed"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Midterm"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="9dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="65"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9 Kasim 2022"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="5dp"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/exams_fragment_notes_detailed"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Final"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="9dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/girilmemis_sinav_vector"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="5dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19 Aralik 2022"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="5dp"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
-
 
 
 
