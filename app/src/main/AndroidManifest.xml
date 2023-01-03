@@ -14,8 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yeditepem"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".GeneralInformationListView"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".view.FacultyPage"
             android:exported="false">
@@ -43,7 +48,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".view.HomePage"
             android:exported="false">
