@@ -23,7 +23,7 @@ class LoginPage : AppCompatActivity() {
 
     fun handleStudentLogin(){
 
-        if(sharedPreferences.getString("studentId","")!=null || sharedPreferences.getString("studentId","")!=""){
+        if(sharedPreferences.getString("studentId","")!=null && sharedPreferences.getString("studentId","")!=""){
             println(sharedPreferences.getString("studentId",""))
             studentViewModel = StudentViewModel()
             studentViewModel.getStudentById(this,sharedPreferences.getString("studentId","")!!,false)
