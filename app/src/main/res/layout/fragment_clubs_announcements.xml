@@ -2,20 +2,302 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout2"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClubsAnnouncementsFragment">
+    tools:context=".EventsAnnouncements">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/announcementFragmentTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#ABABAB">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kulupler"
+            android:clickable="true"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etkinlikler" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="@string/hello_blank_fragment"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/announcementFragmentTabLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/announcementFragmentTabLayout">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/outterLinearLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/tiyatro_kulubu_vector_rectangle"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/club_desc_cell"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/clubName1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Tiyatro Kulubu (YUO) "
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubPresident1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="Baskan: Sena Arici"
+                            android:textSize="10sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/clubEmail1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="E-mail: sena.arici@std.yeditepe.edu.tr"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/clubCoPresident1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="Baskan Yardimcisi: Elif Yavas"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/clubCoPresidentMail1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="elif.yavas@std.yeditepe.edu.tr"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/go_to_club_page_vector"
+                        android:backgroundTint="#00000000"
+                        android:layout_marginTop="15dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/outterLinearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/fotografcilik_klubu_vector_rectangle"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/club_desc_cell">
+
+                        <TextView
+                            android:id="@+id/clubName2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Fotografcilik Kulubu (YUFOK) "
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubPresident2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="Baskan: Can Deniz Tekinturhan"
+                            android:textSize="10sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/clubEmail2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="E-mail: candeniz.t@std.yeditepe.edu.tr"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/clubCoPresident2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="Baskan Yardimcisi: Ceren Taskin"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/clubCoPresidentMail2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="ceren.taskin@std.yeditepe.edu.tr"
+                            android:textSize="10sp"/>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/go_to_club_page_vector"
+                        android:backgroundTint="#00000000"
+                        android:layout_marginTop="15dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/outterLinearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/muzik_kulubu_vector_rectangle"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/club_desc_cell">
+
+                        <TextView
+                            android:id="@+id/clubName3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Muzik Kulubu (YUMK) "
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubPresident3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="Baskan: Yagmur Kesgin"
+                            android:textSize="10sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/clubEmail3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="E-mail: yagmur.kesgin@std.yeditepe.edu.tr"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/clubCoPresident3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="Baskan Yardimcisi: Temel Alp Atalay"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/clubCoPresidentMail3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:text="temelalp.ata@std.yeditepe.edu.tr"
+                            android:textSize="10sp"/>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/go_to_club_page_vector"
+                        android:backgroundTint="#00000000"
+                        android:layout_marginTop="15dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
