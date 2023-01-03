@@ -21,10 +21,10 @@ class GeneralInformationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val layout = inflater.inflate(R.layout.fragment_general_information, container, false)
-        //createViewsTemp(layout)
+        createViewsTemp(layout)
         return layout
     }
-/*Dinamik deneme
+    
     fun createViewsTemp(layout:View){
         val desiredLayout = layout.findViewById<LinearLayout>(R.id.myLayout)
 
@@ -35,5 +35,5 @@ class GeneralInformationFragment : Fragment() {
             desiredLayout.addView(createdThing)
         }
     }
-*/
+
 }
