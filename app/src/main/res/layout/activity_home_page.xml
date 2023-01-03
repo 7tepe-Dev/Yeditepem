@@ -96,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:background="#0048B4"
-        app:itemIconSize="45dp"
+        app:itemIconSize="25dp"
         app:itemIconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

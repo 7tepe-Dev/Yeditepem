@@ -1,5 +1,6 @@
 package com.example.yeditepem.viewmodel
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
@@ -44,10 +45,16 @@ class StudentViewModel(): ViewModel() {
         })
     }
 
-    fun getStudentById(activity: AppCompatActivity, id: String){
+    fun getStudentById(activity: AppCompatActivity, id: String,saveUser: Boolean){
         _getStudentById(id)
         currentStudent.observe(activity, Observer{
             if (currentStudent.value != null){
+                if(saveUser){
+                    val sharedPreferences = activity.getSharedPreferences("com.example.yeditepem.view", Context.MODE_PRIVATE)
+                    sharedPreferences.edit().putString("studentId",id).apply()
+                    println("New preference is added!")
+                }
+
                 val intent = Intent(activity, HomePage::class.java)
                 activity.startActivity(intent)
                 //testAdapter(activity, student.value!!)

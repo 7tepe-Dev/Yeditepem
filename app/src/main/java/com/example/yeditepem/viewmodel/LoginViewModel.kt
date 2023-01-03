@@ -1,7 +1,9 @@
 package com.example.yeditepem.viewmodel
 
+import android.content.Context
 import android.content.Intent
 import android.view.View
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
@@ -35,14 +37,13 @@ class LoginViewModel: ViewModel() {
         }
     }
 
-    fun getUserById(activity: AppCompatActivity, id: String,password: String){
+    fun getUserById(activity: AppCompatActivity, id: String,password: String,saveUser: Boolean){
         _getUserById(id,password)
 
         loginObject.observe(activity, Observer{
             if (loginObject.value != null && loginObject.value!!.isOk == "true"){
-                println("READY TO CONNECT")
                 val studentVM = StudentViewModel()
-                studentVM.getStudentById(activity,id)
+                studentVM.getStudentById(activity,id,saveUser)
                 //LOAD NEXT PAGE
                 /*val intent = Intent(activity, HomePage::class.java)
                 activity.startActivity(intent)*/
@@ -52,6 +53,7 @@ class LoginViewModel: ViewModel() {
                 println("Your username or pssword is wrong!")
                 activity.findViewById<TextView>(R.id.usernameTextBox).text = ""
                 activity.findViewById<TextView>(R.id.passwordTextBox).text = ""
+                activity.findViewById<CheckBox>(R.id.rememberMeCheckBox).isChecked = false
             }
         })
 
