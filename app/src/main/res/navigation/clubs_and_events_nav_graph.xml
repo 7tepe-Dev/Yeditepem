@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clubs_and_events_nav_graph"
+    app:startDestination="@id/eventsAnnouncements">
+
+    <fragment
+        android:id="@+id/clubsAnnouncementsFragment"
+        android:name="com.example.yeditepem.ClubsAnnouncementsFragment"
+        android:label="fragment_clubs_announcements"
+        tools:layout="@layout/fragment_clubs_announcements" />
+    <fragment
+        android:id="@+id/eventsAnnouncements"
+        android:name="com.example.yeditepem.EventsAnnouncements"
+        android:label="fragment_events_announcements"
+        tools:layout="@layout/fragment_events_announcements" />
+</navigation>
