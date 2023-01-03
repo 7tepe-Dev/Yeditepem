@@ -8,349 +8,387 @@
     tools:context=".EventsAnnouncements">
 
     <!-- TODO: Update blank fragment layout -->
-    <ScrollView
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/announcementFragmentTabLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#ABABAB">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kulupler"
+            android:clickable="true"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etkinlikler" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/announcementFragmentTabLayout">
 
-        <LinearLayout
-            android:id="@+id/linearLayoutHolder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/outterLinearLayout1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp">
-
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_logos_drawable">
-
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="2.5dp"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/announcements_logo_vector" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout1_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_cell_drawable">
-
-                    <TextView
-                        android:id="@+id/dateTextView1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="2dp"
-                        android:text="11-12 Aralik | "
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubNameTextView1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
-                        android:text="Fotografcilik Klubu"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubContentTextView1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="-87dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Uludag Gezisi"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/announcementFragmentTabLayout">
 
             <LinearLayout
-                android:id="@+id/outterLinearLayout2"
+                android:id="@+id/linearLayoutHolder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp">
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/innerLinearLayout2_2"
+                    android:id="@+id/outterLinearLayout1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_logos_drawable">
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp">
 
-                    <ImageView
-                        android:id="@+id/imageView2"
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="2.5dp"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/announcements_logo_vector" />
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_logos_drawable">
 
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/announcements_logo_vector" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_cell_drawable">
+
+                        <TextView
+                            android:id="@+id/dateTextView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:text="11-12 Aralik | "
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubNameTextView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:text="Fotografcilik Klubu"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubContentTextView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="-87dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Uludag Gezisi"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/innerLinearLayout2_3"
+                    android:id="@+id/outterLinearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_cell_drawable">
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp">
 
-                    <TextView
-                        android:id="@+id/dateTextView2"
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout2_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="2dp"
-                        android:text="14 Aralik | "
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_logos_drawable">
 
-                    <TextView
-                        android:id="@+id/clubNameTextView2"
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/announcements_logo_vector" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout2_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
-                        android:text="Hukuk Klubu"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_cell_drawable">
 
-                    <TextView
-                        android:id="@+id/clubContentTextView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="-60dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Ogrenci Bulusmasi, Z06"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/dateTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:text="14 Aralik | "
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubNameTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:text="Hukuk Klubu"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubContentTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="-60dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Ogrenci Bulusmasi, Z06"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/outterLinearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_logos_drawable">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/announcements_logo_vector" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_cell_drawable">
+
+                        <TextView
+                            android:id="@+id/dateTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:text="15 Aralik | "
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubNameTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:text="Tiyatro Klubu"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubContentTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="-61dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Ogrenci Bulusmasi, Inan Kirac Sal."
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/outterLinearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_logos_drawable">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/announcements_logo_vector" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_cell_drawable">
+
+                        <TextView
+                            android:id="@+id/dateTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:text="6 Kasim | "
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubNameTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:text="Tasarimda Guz Bulusmalari 2022"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubContentTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="-150dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Inan Kirac Salonu"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/outterLinearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_logos_drawable">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/announcements_logo_vector" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/innerLinearLayout5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/announcements_cell_drawable">
+
+                        <TextView
+                            android:id="@+id/dateTextView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:text="8 Kasim | "
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubNameTextView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:text="Bilisim Klubu"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clubContentTextView51"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="-60dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Tech-Talk Bulusmasi"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/outterLinearLayout3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp">
 
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_logos_drawable">
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="2.5dp"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/announcements_logo_vector" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout3_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_cell_drawable">
-
-                    <TextView
-                        android:id="@+id/dateTextView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="2dp"
-                        android:text="15 Aralik | "
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubNameTextView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
-                        android:text="Tiyatro Klubu"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubContentTextView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="-61dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Ogrenci Bulusmasi, Inan Kirac Sal."
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/outterLinearLayout4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp">
-
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout4_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_logos_drawable">
-
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="2.5dp"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/announcements_logo_vector" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout4_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_cell_drawable">
-
-                    <TextView
-                        android:id="@+id/dateTextView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="2dp"
-                        android:text="6 Kasim | "
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubNameTextView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
-                        android:text="Tasarimda Guz Bulusmalari 2022"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubContentTextView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="-150dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Inan Kirac Salonu"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/outterLinearLayout5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp">
-
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout5_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_logos_drawable">
-
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="2.5dp"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/announcements_logo_vector" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/innerLinearLayout5_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/announcements_cell_drawable">
-
-                    <TextView
-                        android:id="@+id/dateTextView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="2dp"
-                        android:text="8 Kasim | "
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubNameTextView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
-                        android:text="Bilisim Klubu"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/clubContentTextView51"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="-60dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Tech-Talk Bulusmasi"
-                        android:textSize="10sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
+        </ScrollView>
 
 
-        </LinearLayout>
+    </LinearLayout>
 
 
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
