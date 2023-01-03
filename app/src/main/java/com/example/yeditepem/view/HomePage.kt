@@ -37,7 +37,7 @@ class HomePage : AppCompatActivity() {
                     true
                 }
                 else -> {
-                    print("Hellö")
+                    print("A problem occurred!")
                     true
                 }
             }
