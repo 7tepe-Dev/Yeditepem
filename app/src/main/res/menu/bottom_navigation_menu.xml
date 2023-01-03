@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/okulDuyuru"
+        android:id="@+id/faculty"
         android:title=""
         app:showAsAction="ifRoom"
         android:icon="@drawable/okul_duyuru"
         android:enabled="true"
         />
     <item
-        android:id="@+id/anasayfa"
+        android:id="@+id/mainPage"
         android:title=""
         app:showAsAction="ifRoom"
         android:icon="@drawable/bottom_nav_anasayfa"
