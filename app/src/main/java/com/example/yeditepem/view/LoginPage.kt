@@ -17,8 +17,14 @@ class LoginPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedPreferences = this.getSharedPreferences("com.example.yeditepem.view", Context.MODE_PRIVATE)
-        handleComingBackStudent()
+        //handleComingBackStudent()
+
+        var test = StudentViewModel()
+        test.getStudentById(this,"20192905001", false)
+
+
     }
+
 
     fun handleComingBackStudent(){
 
@@ -31,6 +37,7 @@ class LoginPage : AppCompatActivity() {
         }
 
     }
+
     fun handleLogin(view:View){
         val userName:TextView = findViewById(R.id.usernameTextBox)
         val password: TextView = findViewById(R.id.passwordTextBox)

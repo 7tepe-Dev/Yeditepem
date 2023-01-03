@@ -6,8 +6,9 @@ data class Exam(
     var lessonName: String,
     var lessonCode: String,
     var professorName: String,
-    var lessonGrade: Float,
-    var lessonCredit: Int,
+    var lessonGrade: String,
+    var lessonCredit: String,
     var lessonLetterGrade: String,
-    var examDate: Date
+    var examDate: String,
+    var examType: String
 )

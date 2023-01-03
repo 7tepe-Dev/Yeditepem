@@ -5,7 +5,7 @@ data class Lesson(
     var lessonName: String,
     var lessonCode: String,
     var lessonSection: String,
-    var lessonCredit: Int,
+    var lessonCredit: String,
     var professorName: String,
     var lessonLocation: String,
     var lessonTimeRange: String,

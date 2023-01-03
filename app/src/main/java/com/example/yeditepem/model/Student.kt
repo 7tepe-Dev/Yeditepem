@@ -6,6 +6,12 @@ class Student(override val userName: String,
               override val password: String,
               @SerializedName("generalInfo")
               val generalInformation: MyGeneralInformation?,
+              @SerializedName("lessons")
+              val lessons: ArrayList<Lesson>,
+              @SerializedName("exams")
+              val exams: ArrayList<Exam>,
+              @SerializedName("applications")
+              val applications: ArrayList<Application>,
               /*val lessons:MyLessons?,
               val exams:MyExams?,
               val applications: MyApplications?*/
