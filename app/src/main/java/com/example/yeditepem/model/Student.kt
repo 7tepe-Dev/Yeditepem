@@ -12,6 +12,8 @@ class Student(override val userName: String,
               val exams: ArrayList<Exam>,
               @SerializedName("applications")
               val applications: ArrayList<Application>,
+              @SerializedName("messages")
+              val messages: ArrayList<Message>,
               /*val lessons:MyLessons?,
               val exams:MyExams?,
               val applications: MyApplications?*/
