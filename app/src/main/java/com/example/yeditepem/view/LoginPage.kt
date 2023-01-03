@@ -17,18 +17,14 @@ class LoginPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedPreferences = this.getSharedPreferences("com.example.yeditepem.view", Context.MODE_PRIVATE)
-        //handleComingBackStudent()
-
-        var test = StudentViewModel()
-        test.getStudentById(this,"20192905001", false)
+        handleStudentLogin()
+}
 
 
-    }
+    fun handleStudentLogin(){
 
-
-    fun handleComingBackStudent(){
-
-        if(sharedPreferences.getString("studentId","")!=""){
+        if(sharedPreferences.getString("studentId","")!=null || sharedPreferences.getString("studentId","")!=""){
+            println(sharedPreferences.getString("studentId",""))
             studentViewModel = StudentViewModel()
             studentViewModel.getStudentById(this,sharedPreferences.getString("studentId","")!!,false)
         }

@@ -13,8 +13,7 @@ import com.example.yeditepem.viewmodel.StudentViewModel
 
 class GeneralInformationFragment : Fragment() {
 
-    val generalInformationTexts = arrayOf("Status","Student No","Advisor","CGPA","Credits","ECTS",
-    "Financial Approval","Scholarship","Curriculum","Placement Type","Entry Type","Start Date")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -25,21 +24,75 @@ class GeneralInformationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val layout = inflater.inflate(R.layout.fragment_general_information, container, false)
-        createViewsTemp(layout)
+        createGeneralInformationView(layout)
         return layout
     }
 
     @SuppressLint("MissingInflatedId")
-    fun createViewsTemp(layout:View){
+    fun createGeneralInformationView(layout:View){
         val desiredLayout = layout.findViewById<LinearLayout>(R.id.myLayout)
 
-        for (currentText in generalInformationTexts){
-            var createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
-            createdThing.findViewById<TextView>(R.id.statusText).text = currentText
-            createdThing.findViewById<TextView>(R.id.statusValText).text = StudentViewModel.currentStudent.value?.generalInformation?.startDate
-            desiredLayout.addView(createdThing)
-        }
+        val currentGeneralInformation = StudentViewModel.currentStudent.value?.generalInformation
 
-    }
+        var createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Status"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation!!.statusOfStudent
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Student No"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.studentID
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Advisor"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.advisor
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "CGPA"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.grade.toString()
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Credits"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.creditsCompleted.toString() + "/" + currentGeneralInformation.creditsTaken.toString()
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "ECTS"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.ects.toString()
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Financial Approval"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.financialApproval
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Scholarship"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.scholarShip
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Curriculum"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.departmentsCurriculum
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Placement Type"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.placementType
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Entry Type"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.entryType
+        desiredLayout.addView(createdThing)
+
+        createdThing = LayoutInflater.from(layout.context).inflate(R.layout.general_information_list_view, null,false)
+        createdThing.findViewById<TextView>(R.id.generalInformationPlaceHolderText).text = "Start Date"
+        createdThing.findViewById<TextView>(R.id.generalInformationValText).text = currentGeneralInformation.startDate
+        desiredLayout.addView(createdThing)
+     }
 
 }

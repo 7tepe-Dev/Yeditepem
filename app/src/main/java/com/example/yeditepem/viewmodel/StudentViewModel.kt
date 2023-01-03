@@ -49,7 +49,7 @@ class StudentViewModel(): ViewModel() {
         _getStudentById(id)
         currentStudent.observe(activity, Observer{
             if (currentStudent.value != null){
-                /*
+
                 if(saveUser){
                     val sharedPreferences = activity.getSharedPreferences("com.example.yeditepem.view", Context.MODE_PRIVATE)
                     sharedPreferences.edit().putString("studentId",id).apply()
@@ -58,12 +58,7 @@ class StudentViewModel(): ViewModel() {
 
                 val intent = Intent(activity, HomePage::class.java)
                 activity.startActivity(intent)
-                //testAdapter(activity, student.value!!)
-                //println(student.value!!.generalInformation?.advisor)
-                //GeneralInformationAdapter(activity, currentStudent.value!!.generalInformation!!)
-                */
 
-                println(currentStudent.value!!.applications[1].applicationHour)
             }
         })
     }

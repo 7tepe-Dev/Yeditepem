@@ -29,9 +29,16 @@ class LessonsFragment : Fragment() {
 
     fun createLessonsView(layout:View){
         val parentLayout = layout.findViewById<LinearLayout>(R.id.lessonsLinearLayout)
-        repeat(20){
+
+        val currentLessons = StudentViewModel.currentStudent.value?.lessons
+
+        for(lesson in currentLessons!!){
             var createdThing = LayoutInflater.from(layout.context).inflate(R.layout.courses_list_view, null,false)
+            createdThing.findViewById<TextView>(R.id.courseCodeText).text = lesson.lessonCode + "." + lesson.lessonSection
+            createdThing.findViewById<TextView>(R.id.courseCreditInt).text =lesson.lessonCredit
+            createdThing.findViewById<TextView>(R.id.courseNameText).text =lesson.lessonName
             parentLayout.addView(createdThing)
         }
+
     }
 }
