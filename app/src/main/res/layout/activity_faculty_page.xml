@@ -24,7 +24,7 @@
             app:menu="@menu/top_app_bar"
             app:navigationIcon="?attr/actionModeCloseDrawable"
             app:navigationIconTint="@color/white"
-            app:title="Genel"
+            app:title="General"
             app:titleCentered="true"
             app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
