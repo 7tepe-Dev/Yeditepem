@@ -1,14 +1,471 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    tools:context=".MainFragment"
+    android:background="#DEEDF3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GUNUN DERSLERI"
+                android:textAlignment="center"
+                android:background="#DBDADA"
+                android:textStyle="bold"
+                />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <LinearLayout
+                       android:layout_width="190dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginRight="15dp"
+                       android:background="@drawable/course_detailed_cell"
+                       android:orientation="horizontal">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="2dp"
+                           android:layout_marginTop="5dp"
+                           android:layout_marginEnd="5dp"
+                           android:text="14-16"
+                           android:textColor="@color/white"
+                           android:textSize="12sp" />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="10dp"
+                           android:text="ACM431"
+                           android:textSize="13.5sp"
+                           android:textStyle="bold" />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="-53dp"
+                           android:layout_marginTop="10dp"
+                           android:text="301 / Ticari Bilimler (3)"
+                           android:textSize="11sp" />
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:background="@drawable/course_detailed_cell"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginEnd="5dp">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="13-16"
+                           android:textSize="12sp"
+                           android:textColor="@color/white"
+                           android:layout_marginStart="2dp"
+                           android:layout_marginTop="5dp"
+                           />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="ACM421"
+                           android:textSize="13.5sp"
+                           android:layout_marginStart="10dp"
+                           android:textStyle="bold" />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="118 / Ticari Bilimler (1)"
+                           android:textSize="11sp"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginEnd="20dp"
+                           android:layout_marginStart="-53dp"/>
+                   </LinearLayout>
+               </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GUNUN OGRENCI MENUSU"
+                android:textAlignment="center"
+                android:background="#DBDADA"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/day_student_meal_menu"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Romen Corba, Etsiz Nohut, Etsiz Kabak Kalye"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pirinc Pilavi, Salata, Mucver, Ayran"
+                    android:layout_marginStart="65dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DBDADA">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Etkinlikler"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duyurular" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:background="@drawable/fragment_main_announcements_date_day"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="10dp">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Sali"
+                               android:textColor="@color/white"
+                               android:layout_marginStart="30dp"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="29 KAS"
+                               android:layout_marginStart="18dp"
+                               android:layout_marginTop="10dp"
+                               android:textStyle="bold"/>
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="5dp"
+                           android:layout_marginEnd="10dp"
+                           android:background="@drawable/fragment_main_announcements_desc">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Egitim Fakultesi Rehberlik ve Psikolojik Danisma.."
+                               android:textSize="12.5sp"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginLeft="5dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="T/C/ YEDITEPE UNIVERSITESI EGITIM FAKULTESI DEKANLIGI'NA 14.11.2022 tarihinde Resmi Gazetede..."
+                               android:textSize="11sp"
+                               android:layout_marginTop="5dp"
+                               android:layout_marginLeft="5dp"
+                               />
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:background="@drawable/fragment_main_announcements_date_day"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="10dp">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Sali"
+                               android:textColor="@color/white"
+                               android:layout_marginStart="30dp"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="29 KAS"
+                               android:layout_marginStart="18dp"
+                               android:layout_marginTop="10dp"
+                               android:textStyle="bold"/>
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="5dp"
+                           android:layout_marginEnd="10dp"
+                           android:background="@drawable/fragment_main_announcements_desc">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Egitim Fakultesi Rehberlik ve Psikolojik Danisma.."
+                               android:textSize="12.5sp"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginLeft="5dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="T/C/ YEDITEPE UNIVERSITESI EGITIM FAKULTESI DEKANLIGI'NA 14.11.2022 tarihinde Resmi Gazetede..."
+                               android:textSize="11sp"
+                               android:layout_marginTop="5dp"
+                               android:layout_marginLeft="5dp"
+                               />
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:background="@drawable/fragment_main_announcements_date_day"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="10dp">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Sali"
+                               android:textColor="@color/white"
+                               android:layout_marginStart="30dp"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="29 KAS"
+                               android:layout_marginStart="18dp"
+                               android:layout_marginTop="10dp"
+                               android:textStyle="bold"/>
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="5dp"
+                           android:layout_marginEnd="10dp"
+                           android:background="@drawable/fragment_main_announcements_desc">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Egitim Fakultesi Rehberlik ve Psikolojik Danisma.."
+                               android:textSize="12.5sp"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginLeft="5dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="T/C/ YEDITEPE UNIVERSITESI EGITIM FAKULTESI DEKANLIGI'NA 14.11.2022 tarihinde Resmi Gazetede..."
+                               android:textSize="11sp"
+                               android:layout_marginTop="5dp"
+                               android:layout_marginLeft="5dp"
+                               />
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:background="@drawable/fragment_main_announcements_date_day"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="10dp">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Sali"
+                               android:textColor="@color/white"
+                               android:layout_marginStart="30dp"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="29 KAS"
+                               android:layout_marginStart="18dp"
+                               android:layout_marginTop="10dp"
+                               android:textStyle="bold"/>
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="5dp"
+                           android:layout_marginEnd="10dp"
+                           android:background="@drawable/fragment_main_announcements_desc">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Egitim Fakultesi Rehberlik ve Psikolojik Danisma.."
+                               android:textSize="12.5sp"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginLeft="5dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="T/C/ YEDITEPE UNIVERSITESI EGITIM FAKULTESI DEKANLIGI'NA 14.11.2022 tarihinde Resmi Gazetede..."
+                               android:textSize="11sp"
+                               android:layout_marginTop="5dp"
+                               android:layout_marginLeft="5dp"
+                               />
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:background="@drawable/fragment_main_announcements_date_day"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="10dp">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Sali"
+                               android:textColor="@color/white"
+                               android:layout_marginStart="30dp"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="29 KAS"
+                               android:layout_marginStart="18dp"
+                               android:layout_marginTop="10dp"
+                               android:textStyle="bold"/>
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginStart="5dp"
+                           android:layout_marginEnd="10dp"
+                           android:background="@drawable/fragment_main_announcements_desc">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Egitim Fakultesi Rehberlik ve Psikolojik Danisma.."
+                               android:textSize="12.5sp"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginLeft="5dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="T/C/ YEDITEPE UNIVERSITESI EGITIM FAKULTESI DEKANLIGI'NA 14.11.2022 tarihinde Resmi Gazetede..."
+                               android:textSize="11sp"
+                               android:layout_marginTop="5dp"
+                               android:layout_marginLeft="5dp"
+                               />
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+               </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
