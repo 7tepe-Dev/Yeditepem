@@ -4,9 +4,11 @@ data class Lesson(
     var lessonID: String,
     var lessonName: String,
     var lessonCode: String,
+    var lessonSection: String,
+    var lessonCredit: Int,
     var professorName: String,
     var lessonLocation: String,
-    var lessonTime: String,
-    var lessonCredit: Int,
+    var lessonTimeRange: String,
+    var lessonDay:String,
     var lessonTerm: String
 )

@@ -1,5 +1,6 @@
 package com.example.yeditepem.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -14,6 +15,10 @@ class FacultyPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faculty_page)
         materialToolbar = findViewById(R.id.topAppBar)
+        materialToolbar.setNavigationOnClickListener(){
+            startActivity(Intent(this, HomePage::class.java))
+        }
+
         var bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
